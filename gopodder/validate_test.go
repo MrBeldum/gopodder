@@ -54,6 +54,7 @@ func TestIsValidFeedURL(t *testing.T) {
 		{"https://", false},
 		{"http:///", false},
 		{"https:///feed", false},
+		{"http://:8080/feed", false},
 		{"javascript:alert(1)", false},
 		{"data:text/html,<script>alert(1)</script>", false},
 		{"file:///etc/passwd", false},
